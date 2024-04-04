@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="MediumPurple">
+        Title="MainWindow" Height="450" Width="800" Background="MediumPurple" MaxHeight="600" MaxWidth="900">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="54.255"/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -24,14 +24,16 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="2.5*"/>
         </Grid.ColumnDefinitions>
-        <TextBox Name="LoginBox" TextAlignment="Center" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Height="30" FontSize="16"/>
-        <TextBox Name="PasswordBox" TextAlignment="Center" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Height="30" FontSize="16"/>
-        <TextBlock Margin="5"  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center">
-            Не зарегестрированы?
-            <Hyperlink NavigateUri="C:\23ис-5 Мухаметшин\WpfApp2\Window1.xaml.cs">
-                Зарегестрируйся
-            </Hyperlink>
-        </TextBlock>
+        <TextBox Name="LoginBox" TextAlignment="Center" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Height="30" Width="280" FontSize="16"/>
+        <TextBox Name="passres" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Height="30" Width="280" FontSize="16" Visibility="Hidden" IsEnabled="False"/>
+        <PasswordBox Name="PasswordBox" PasswordChar="*"  Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Height="30" Width="280" FontSize="16" Visibility="Visible" IsEnabled="True"/>
+
+        <Button Name="show_off_password" Grid.Row="4" Grid.Column="4" Width="40" Height="40" HorizontalAlignment="Left" Background="MediumPurple" BorderThickness="0" Click="show_off_password_Click">
+            <Image Name="eye" Source="C:\Минаев\WpfApp2\res\eyes1.png"/>
+        </Button>
+
+        <TextBlock Name="result_text" Margin="5" Text="Войдите в систему."  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Name="switch" Content="регистрация" Grid.Row="0" Grid.Column="4" Width="170" Height="40" Click="switch_Click"/>
         <Button Name="login" Content="Зарегестрироваться" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" Height="40" Click="login_Click"/>
         <Image Source="/res/image1.png" Grid.Row="3" Width="50" HorizontalAlignment="Right"/>
         <Image Source="/res/image2.png" Grid.Row="4" Width="50" HorizontalAlignment="Right"/>

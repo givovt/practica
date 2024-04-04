@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800" Background="MediumPurple">
+        Title="Window1" Height="450" Width="800" Background="MediumPurple" MaxHeight="600" MaxWidth="900">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -25,11 +25,17 @@
             <ColumnDefinition Width="2.5*"/>
         </Grid.ColumnDefinitions>
         <TextBox Name="loginbox" TextAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Height="30" FontSize="16"/>
-        <TextBox TextAlignment="Center" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Height="30" FontSize="16"/>
-        <TextBox Name="PasswordBox" TextAlignment="Center" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Height="30" FontSize="16"/>
-        <TextBox TextAlignment="Center" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Height="30" FontSize="16"/>
-        <TextBlock Text="Зарегестрируйтесь" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Name="email_box" TextAlignment="Center" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Height="30" FontSize="16"/>
+        <PasswordBox Name="PasswordBox" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Height="30" FontSize="16"/>
+        <PasswordBox Name="Password2" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Height="30" FontSize="16"/>
+        <TextBlock Name="result_reg_text" Text="Зарегестрируйтесь" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Button Name="reg" Content="Зарегестрироваться" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" Height="40" Click="RegBtn_Click"/>
+
+        <TextBlock Name="n1" Grid.Row="1" Grid.Column="4" Background="Red" Height="30" Width="20" HorizontalAlignment="Left" Visibility="Hidden"/>
+        <TextBlock Name="n2" Grid.Row="2" Grid.Column="4" Background="Red" Height="30" Width="20" HorizontalAlignment="Left" Visibility="Hidden"/>
+        <TextBlock Name="n3" Grid.Row="3" Grid.Column="4" Background="Red" Height="30" Width="20" HorizontalAlignment="Left" Visibility="Hidden"/>
+        <TextBlock Name="n4" Grid.Row="4" Grid.Column="4" Background="Red" Height="30" Width="20" HorizontalAlignment="Left" Visibility="Hidden"/>
+
         <Image Source="/res/image1.png" Grid.Row="1" Width="50" HorizontalAlignment="Right"/>
         <Image Source="/res/image3.png" Grid.Row="2" Width="50" HorizontalAlignment="Right"/>
         <Image Source="/res/image2.png" Grid.Row="3" Width="50" HorizontalAlignment="Right"/>
